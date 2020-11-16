@@ -51,7 +51,11 @@ class Clock extends React.Component {
   render() {
     let location = this.props.name;
     let time = moment().tz(location).format('hh:mma Z');
-    return <Text>{location} - {time}</Text>;
+    return (
+      <Text>
+        {location} - {time}
+      </Text>
+    );
   }
 }
 const WorldClock = () => {
