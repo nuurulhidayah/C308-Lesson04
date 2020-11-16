@@ -49,7 +49,7 @@ class Eats extends React.Component {
 //Mini Project
 class Clock extends React.Component {
   render() {
-    let location = this.props.name;
+    let location = this.props.location;
     let time = moment().tz(location).format('hh:mma Z');
     return (
       <Text>
@@ -61,10 +61,10 @@ class Clock extends React.Component {
 const WorldClock = () => {
   return (
     <View>
-      <Clock name="Asia/Singapore" />
-      <Clock name="Europe/London" />
-      <Clock name="America/New_York" />
-      <Clock name="Europe/Oslo" />
+      <Clock location="Asia/Singapore" />
+      <Clock location="Europe/London" />
+      <Clock location="America/New_York" />
+      <Clock location="Europe/Oslo" />
     </View>
   );
 };
