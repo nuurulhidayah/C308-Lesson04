@@ -18,13 +18,43 @@ import {
 
 import {
   Header,
-  LearnMoreLinks,
+  // eslint-disable-next-line no-unused-vars
   Colors,
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+//Exercise 01
+const Welcome = () => {
+  return <Text>Welcome to C308 Web Framework!</Text>;
+};
+//Exercise 02
+class myFirstApp extends React.Component {
+  render() {
+    return <Text>My First React Native App</Text>;
+  }
+}
+//Exercise 03
+const SemModule = (props) => {
+  return (
+    <Text>
+      {props.day} - {props.module}
+    </Text>
+  );
+};
+//Exercise 04
+class Eats extends React.Component {
+  render() {
+    return (
+      <Text>
+        {this.props.name}
+        {this.props.location}
+      </Text>
+    );
+  }
+}
 
 const App: () => React$Node = () => {
+  //console.log('This is a console statement');
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -40,7 +70,18 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Text>Welcome to C308 Web Frameworks!</Text>
+              //Exercise 01
+              <Welcome />
+              //Exercise 02
+              <myFirstApp />
+              //Exercise 03
+              <SemModule day={'Monday'} module={'C348'} />
+              <SemModule day={'Tuesday'} module={'C273'} />
+              <SemModule day={'Friday'} module={'C308'} />
+              //Exercise 04
+              <Text>Recommended Eats @ RP {'\n'}</Text>
+              <Eats name={'Sweet Tooth Waffles \n'} />
+              <Eats location={'W6 Level 1, E-canteen'} />
             </View>
           </View>
         </ScrollView>
