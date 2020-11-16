@@ -23,14 +23,15 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
 //Exercise 01
 const Welcome = () => {
   return <Text>Welcome to C308 Web Framework!</Text>;
 };
 //Exercise 02
-class myFirstApp extends React.Component {
+class MyFirstApp extends React.Component {
   render() {
-    return <Text>My First React Native App</Text>;
+    return <Text>My First React Native App {'\n'}</Text>;
   }
 }
 //Exercise 03
@@ -70,18 +71,24 @@ const App: () => React$Node = () => {
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              //Exercise 01
+              {/*Exercise 01*/}
               <Welcome />
-              //Exercise 02
-              <myFirstApp />
-              //Exercise 03
+              {/*Exercise 02*/}
+              <MyFirstApp />
+              {/*Exercise 03*/}
               <SemModule day={'Monday'} module={'C348'} />
               <SemModule day={'Tuesday'} module={'C273'} />
               <SemModule day={'Friday'} module={'C308'} />
-              //Exercise 04
-              <Text>Recommended Eats @ RP {'\n'}</Text>
-              <Eats name={'Sweet Tooth Waffles \n'} />
-              <Eats location={'W6 Level 1, E-canteen'} />
+              {/*Exercise 04*/}
+              <Text>{'\n'}Recommended Eats @ RP</Text>
+              <Eats name={'Sweet Tooth Waffles'} />
+              <Eats location={'W6 Level 1, E-canteen\n'} />
+              <Eats name={'Crowded Bowl'} />
+              <Eats location={'W4/W6 Lawn Canteen \n'} />
+              <Eats name={'Western Cuisine @ Koufu'} />
+              <Eats location={'E1 Level 1, Koufu \n'} />
+              <Eats name={'Ayam Penyet'} />
+              <Eats location={'W4/W6 Lawn Canteen \n'} />
             </View>
           </View>
         </ScrollView>
