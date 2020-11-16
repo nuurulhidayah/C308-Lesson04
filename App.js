@@ -1,11 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
+import moment from 'moment-timezone';
 import React from 'react';
 import {
   SafeAreaView,
@@ -18,11 +11,11 @@ import {
 
 import {
   Header,
-  // eslint-disable-next-line no-unused-vars
   Colors,
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import NativeClipboard from 'react-native/Libraries/Components/Clipboard/NativeClipboard';
 
 //Exercise 01
 const Welcome = () => {
@@ -53,9 +46,28 @@ class Eats extends React.Component {
     );
   }
 }
-
+//Mini Project
+class Clock extends React.Component {
+  render() {
+    let location = this.props.name;
+    let time = moment().tz(location).format('hh:mma Z');
+    return <Text>{location} - {time}</Text>;
+  }
+}
+const WorldClock = () => {
+  return (
+    <View>
+      <Clock name="Asia/Singapore" />
+      <Clock name="Europe/London" />
+      <Clock name="America/New_York" />
+      <Clock name="Europe/Oslo" />
+    </View>
+  );
+};
 const App: () => React$Node = () => {
   //console.log('This is a console statement');
+  //Exercise 05
+  console.log('Listing semester modules and recommended eats');
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -89,6 +101,8 @@ const App: () => React$Node = () => {
               <Eats location={'E1 Level 1, Koufu \n'} />
               <Eats name={'Ayam Penyet'} />
               <Eats location={'W4/W6 Lawn Canteen \n'} />
+              {/*Mini Project*/}
+              <WorldClock />
             </View>
           </View>
         </ScrollView>
