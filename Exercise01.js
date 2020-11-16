@@ -54,7 +54,7 @@ class Eats extends React.Component {
 }
 
 const App: () => React$Node = () => {
-  console.log('This is a console statement');
+  //console.log('This is a console statement');
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -79,8 +79,8 @@ const App: () => React$Node = () => {
               <SemModule day={'Tuesday'} module={'C273'} />
               <SemModule day={'Friday'} module={'C308'} />
               //Exercise 04
-              <Eats name={'Recommended Eats @ RP \n'} />
-              <Eats name={'Sweet Tooth Waffles'} />
+              <Text>Recommended Eats @ RP {'\n'}</Text>
+              <Eats name={'Sweet Tooth Waffles \n'} />
               <Eats location={'W6 Level 1, E-canteen'} />
             </View>
           </View>
